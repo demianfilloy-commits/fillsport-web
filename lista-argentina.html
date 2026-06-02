@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista Argentina — FILLSPORT Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#111114;--s1:#1a1a20;--s2:#22222a;--s3:#2a2a35;
+  --gold:#c9a84c;--gold-lt:#e8c96d;--gold-dim:rgba(201,168,76,.12);--gold-dim2:rgba(201,168,76,.22);
+  --white:#f2f2f4;--muted:#8888a0;--muted2:#55556a;--border:rgba(255,255,255,.07);--border-gold:rgba(201,168,76,.2);
+  --r:14px;--r2:10px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.5;min-height:100vh}
+
+header{position:sticky;top:0;z-index:100;background:rgba(17,17,20,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;padding:0 28px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-phi{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:400;color:#8888a0;flex-shrink:0;font-family:Georgia,'Times New Roman',serif;line-height:1;letter-spacing:-1px}
+.logo-name{font-size:14px;font-weight:800;color:var(--white);letter-spacing:1.5px;text-transform:uppercase;line-height:1.2}
+.logo-sub{font-size:9px;font-weight:500;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:2px;flex:1}
+nav a{color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap}
+nav a:hover{color:var(--white);background:rgba(255,255,255,.05)}
+nav a.active{color:var(--gold);background:var(--gold-dim)}
+.lang-sel{display:flex;gap:4px;margin-left:auto;flex-shrink:0}
+.lang-sel button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 10px;border-radius:7px;cursor:pointer;font-size:13px;font-family:inherit;transition:all .15s;line-height:1}
+.lang-sel button.active,.lang-sel button:hover{background:var(--gold-dim2);border-color:var(--border-gold);color:var(--white)}
+.lang-sel button.active{font-weight:700}
+
+.page-hero{padding:40px 28px 28px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;left:-60px;width:400px;height:300px;background:radial-gradient(ellipse,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none}
+.ph-inner{max-width:1080px;margin:0 auto}
+.ph-eye{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.ph-inner h1{font-size:clamp(20px,3.5vw,32px);font-weight:900;color:var(--white);margin-bottom:14px;letter-spacing:-.3px}
+.ph-inner h1 span{font-weight:400;color:var(--muted);font-size:.65em}
+.ph-meta{display:flex;gap:20px;flex-wrap:wrap}
+.ph-meta span{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.ph-meta strong{color:var(--gold);font-weight:700}
+
+.fbar{background:rgba(17,17,20,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 28px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:60px;z-index:90}
+.sbox{position:relative;flex:1;min-width:160px;max-width:280px}
+.sbox input{width:100%;background:var(--s2);border:1px solid var(--border);color:var(--white);padding:7px 12px 7px 30px;border-radius:8px;font-size:12px;font-family:inherit;outline:none;transition:border-color .15s}
+.sbox input:focus{border-color:var(--border-gold)}
+.sbox input::placeholder{color:var(--muted2)}
+.sico{position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted2);pointer-events:none}
+.fbtns{display:flex;gap:5px;flex-wrap:wrap}
+.fbtn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 13px;border-radius:20px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit;transition:all .15s;white-space:nowrap}
+.fbtn.active,.fbtn:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.rcount{margin-left:auto;font-size:11px;color:var(--muted2);white-space:nowrap}
+
+.twrap{padding:24px 28px;max-width:1200px;margin:0 auto}
+.pgroup{margin-bottom:44px}
+.phd{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.ppill{background:var(--gold-dim);border:1px solid var(--border-gold);color:var(--gold);padding:3px 12px;border-radius:20px;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.pname-hd{font-size:13px;font-weight:700;color:var(--white)}
+.pcount{font-size:11px;color:var(--muted2)}
+table{width:100%;border-collapse:collapse}
+thead th{background:var(--s2);color:var(--muted2);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 12px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+thead th:first-child{width:32px;text-align:center}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+tbody tr:hover{background:rgba(255,255,255,.03)}
+tbody td{padding:10px 12px;vertical-align:top;font-size:12.5px}
+td:first-child{text-align:center;color:var(--muted2);font-size:11px;font-weight:600;padding-top:13px}
+.pn{font-weight:700;color:var(--white);font-size:13px;line-height:1.3}
+.psub{font-size:10px;color:var(--muted);margin-top:2px}
+.pb{display:inline-block;padding:2px 7px;border-radius:5px;font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
+.pb-bos{background:rgba(30,90,160,.2);border:1px solid rgba(30,90,160,.4);color:#6aabdf}
+.pb-form{background:rgba(34,139,70,.2);border:1px solid rgba(34,139,70,.35);color:#5cb87a}
+.pb-oth{background:rgba(120,120,140,.15);border:1px solid rgba(120,120,140,.25);color:var(--muted)}
+.pos-main{font-weight:600;color:var(--white);font-size:12px}
+.pos-cm{font-size:10px;color:var(--muted);margin-top:1px}
+.team-name{font-weight:600;color:var(--white);font-size:12px}
+.team-league{font-size:10px;color:var(--muted);margin-top:1px}
+.topb{display:inline-block;background:rgba(201,168,76,.25);color:var(--gold-lt);padding:1px 6px;border-radius:6px;font-size:9px;font-weight:800;margin-left:4px;vertical-align:middle}
+.dm{color:var(--muted)}
+.lk-wrap{display:flex;flex-direction:column;gap:4px}
+.lk{color:var(--gold);text-decoration:none;font-size:11px;font-weight:600;transition:color .15s;white-space:nowrap}
+.lk:hover{color:var(--gold-lt);text-decoration:underline}
+.tnotes{max-width:210px;font-size:11px;color:var(--muted);line-height:1.5}
+.empty{text-align:center;padding:56px;color:var(--muted2);font-size:13px}
+
+footer{background:var(--s1);border-top:1px solid var(--border);padding:36px 28px 24px;margin-top:40px}
+.fi{max-width:1080px;margin:0 auto}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px;margin-bottom:24px}
+.fb .fn{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
+.fb p{font-size:11px;color:var(--muted2);line-height:1.8}
+.fc h4{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.fc a{display:block;color:var(--muted);text-decoration:none;font-size:12px;margin-bottom:6px;transition:color .15s}
+.fc a:hover{color:var(--white)}
+.fbot{border-top:1px solid var(--border);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:10px;color:var(--muted2)}
+
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){
+  header{padding:0 14px}
+  nav a{padding:5px 8px;font-size:11px}
+  .page-hero,.twrap,.fbar{padding-left:14px;padding-right:14px}
+  .fg{grid-template-columns:1fr}
+  thead th:nth-child(5),tbody td:nth-child(5){display:none}
+  .tnotes{display:none}
+}
+@media(max-width:420px){nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-phi">φ</div>
+    <div>
+      <div class="logo-name">Fillsport</div>
+      <div class="logo-sub">Basketball Agency</div>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html" data-t="nav_home">Inicio</a>
+    <a href="lista-ita.html" data-t="nav_ita">ITA & Bosman A</a>
+    <a href="lista-argentina.html" class="active" data-t="nav_arg">Argentina</a>
+  </nav>
+  <div class="lang-sel">
+    <button data-lang="es" title="Español">🇪🇸</button>
+    <button data-lang="en" title="English">🇬🇧</button>
+    <button data-lang="it" title="Italiano">🇮🇹</button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="ph-inner">
+    <div class="ph-eye" data-t="list_arg_tag">Mercado Argentino</div>
+    <h1><span data-t="page_arg_title">Lista Argentina</span> &nbsp;<span data-t="page_arg_sub">Lista de Jugadores 2026/27</span></h1>
+    <div class="ph-meta">
+      <span><strong data-t="season">Temporada</strong>: 2026 / 2027</span>
+      <span><strong data-t="updated">Actualizado</strong>: Junio 2026</span>
+      <span id="hero-count"></span>
+    </div>
+  </div>
+</div>
+
+<div class="fbar">
+  <div class="sbox">
+    <span class="sico">⌕</span>
+    <input type="text" id="search" placeholder="Buscar jugador..." data-t-ph="search_placeholder">
+  </div>
+  <div class="fbtns" id="fbtns"></div>
+  <span class="rcount" id="rcount"></span>
+</div>
+
+<div class="twrap" id="troot"></div>
+
+<footer>
+  <div class="fi">
+    <div class="fg">
+      <div class="fb"><div class="fn">Fillsport</div><p>International Basketball Agency<br>FIBA Licensed · CONI Registered</p></div>
+      <div class="fc">
+        <h4 data-t="footer_contact">Contacto</h4>
+        <a href="mailto:pablofilloy@gmail.com">pablofilloy@gmail.com</a>
+        <a href="mailto:demianfilloy@gmail.com">demianfilloy@gmail.com</a>
+        <a href="https://wa.me/393347178526" target="_blank">WA · +39 334 717 8526</a>
+        <a href="https://wa.me/5493513339248" target="_blank">WA · +54 9 351 333 9248</a>
+      </div>
+      <div class="fc">
+        <h4 data-t="footer_lists">Listas</h4>
+        <a href="lista-ita.html" data-t="nav_ita">ITA & Bosman A</a>
+        <a href="lista-argentina.html" data-t="nav_arg">Argentina</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2026 FILLSPORT International Basketball Agency</p>
+      <p style="opacity:.5" data-t="footer_disclaimer">Información sujeta a cambios.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script>
+let data=null,activePos='all';
+
+function pbadge(passport){
+  if(!passport) return '';
+  const lo=passport.toLowerCase();
+  if(lo.includes('bosman')) return `<span class="pb pb-bos">${passport}</span>`;
+  if(lo.includes('formazione')||lo.includes('form. it')) return `<span class="pb pb-form">${passport}</span>`;
+  return `<span class="pb pb-oth">${passport}</span>`;
+}
+
+function links(p){
+  let h='<div class="lk-wrap">';
+  if(p.profile)  h+=`<a href="${p.profile}"  target="_blank" class="lk">↗ Perfil</a>`;
+  if(p.profile2) h+=`<a href="${p.profile2}" target="_blank" class="lk">↗ Perfil LDD</a>`;
+  if(p.video)    h+=`<a href="${p.video}"    target="_blank" class="lk">▶ Video</a>`;
+  if(p.video2)   h+=`<a href="${p.video2}"   target="_blank" class="lk">▶ Video 2</a>`;
+  if(p.video3)   h+=`<a href="${p.video3}"   target="_blank" class="lk">▶ Video 3</a>`;
+  h+='</div>';
+  return h;
+}
+
+function render(){
+  if(!data) return;
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  let total=0,html='';
+  data.positions.forEach(pos=>{
+    const rows=pos.players.filter(p=>{
+      const ok=activePos==='all'||pos.name===activePos;
+      const qs=!q||[p.name,p.team,p.league,p.passport,p.nat].some(v=>(v||'').toLowerCase().includes(q));
+      return ok&&qs;
+    });
+    if(!rows.length) return;
+    total+=rows.length;
+    html+=`<div class="pgroup">
+      <div class="phd">
+        <span class="ppill">${pos.posLabel}</span>
+        <span class="pname-hd">${pos.name}</span>
+        <span class="pcount">${rows.length} jugadores</span>
+      </div>
+      <table><thead><tr>
+        <th>#</th>
+        <th>JUGADOR</th>
+        <th>ROL / MEDIDAS</th>
+        <th>EQUIPO / LIGA</th>
+        <th>NOTAS</th>
+        <th>LINK</th>
+      </tr></thead><tbody>`;
+    rows.forEach((p,i)=>{
+      const top=p.notes&&(p.notes.includes('★')||p.notes.includes('⭐'));
+      html+=`<tr>
+        <td>${i+1}</td>
+        <td>
+          <div class="pn">${p.name}${top?'<span class="topb">TOP</span>':''}</div>
+          <div class="psub">${pbadge(p.passport)}${p.passport&&p.nat?' · ':''}<span style="color:var(--muted)">${p.nat||''}</span></div>
+        </td>
+        <td>
+          <div class="pos-main">${p.role||'—'}</div>
+          ${p.height?`<div class="pos-cm">${p.height}</div>`:''}
+        </td>
+        <td>
+          <div class="team-name">${p.team||'—'}</div>
+          ${p.league?`<div class="team-league">${p.league}</div>`:''}
+        </td>
+        <td class="tnotes">${p.notes||'—'}</td>
+        <td>${links(p)}</td>
+      </tr>`;
+    });
+    html+=`</tbody></table></div>`;
+  });
+  document.getElementById('troot').innerHTML=html||`<p class="empty">Sin resultados</p>`;
+  document.getElementById('rcount').textContent=`${t('results_showing')} ${total} ${t('results_players')}`;
+  document.getElementById('hero-count').innerHTML=`<strong style="color:var(--gold)">${total}</strong> ${t('results_players')}`;
+}
+
+function buildFilters(){
+  if(!data) return;
+  const w=document.getElementById('fbtns');
+  let h=`<button class="fbtn active" data-pos="all">${t('filter_all')}</button>`;
+  data.positions.forEach(p=>{h+=`<button class="fbtn" data-pos="${p.name}">${p.posLabel}</button>`;});
+  w.innerHTML=h;
+  w.querySelectorAll('.fbtn').forEach(b=>b.addEventListener('click',()=>{
+    activePos=b.dataset.pos;
+    w.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');render();
+  }));
+}
+
+function onLangChange(){buildFilters();render();}
+
+fetch('data/players-argentina.json').then(r=>r.json()).then(d=>{data=d;buildFilters();render();});
+document.addEventListener('DOMContentLoaded',()=>{document.getElementById('search').addEventListener('input',render);});
+</script>
+</body>
+</html>

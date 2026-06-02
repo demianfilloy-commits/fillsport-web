@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FILLSPORT — International Basketball Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#111114;--s1:#1a1a20;--s2:#22222a;--s3:#2a2a35;
+  --gold:#c9a84c;--gold-lt:#e8c96d;--gold-dim:rgba(201,168,76,.12);--gold-dim2:rgba(201,168,76,.22);
+  --white:#f2f2f4;--muted:#8888a0;--muted2:#55556a;--border:rgba(255,255,255,.07);--border-gold:rgba(201,168,76,.2);
+  --r:14px;--r2:10px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.5;min-height:100vh}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(17,17,20,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;padding:0 28px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-phi{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:400;color:#8888a0;flex-shrink:0;font-family:Georgia,'Times New Roman',serif;line-height:1;letter-spacing:-1px}
+.logo-name{font-size:14px;font-weight:800;color:var(--white);letter-spacing:1.5px;text-transform:uppercase;line-height:1.2}
+.logo-sub{font-size:9px;font-weight:500;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:2px;flex:1}
+nav a{color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap}
+nav a:hover{color:var(--white);background:rgba(255,255,255,.05)}
+nav a.active{color:var(--gold);background:var(--gold-dim)}
+.lang-sel{display:flex;gap:4px;margin-left:auto;flex-shrink:0}
+.lang-sel button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 10px;border-radius:7px;cursor:pointer;font-size:13px;font-family:inherit;transition:all .15s;line-height:1}
+.lang-sel button.active,.lang-sel button:hover{background:var(--gold-dim2);border-color:var(--border-gold);color:var(--white)}
+.lang-sel button.active{font-weight:700}
+
+/* HERO */
+.hero{padding:72px 28px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(201,168,76,.08) 0%,transparent 65%);pointer-events:none}
+.hero-phi{font-size:72px;font-weight:400;color:#8888a0;line-height:1;margin-bottom:14px;font-family:Georgia,'Times New Roman',serif}
+.hero h1{font-size:clamp(28px,5.5vw,52px);font-weight:900;letter-spacing:7px;text-transform:uppercase;color:var(--white);margin-bottom:6px}
+.divider{width:36px;height:2px;background:var(--gold);margin:18px auto;border-radius:2px}
+.hero-tagline{font-size:11px;font-weight:500;color:var(--muted);letter-spacing:2px;text-transform:uppercase;line-height:2.4;margin-bottom:36px}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.pill{border:1px solid var(--border-gold);color:var(--muted);padding:6px 16px;border-radius:40px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.stat .num{font-size:30px;font-weight:900;color:var(--gold);letter-spacing:-1px}
+.stat .lbl{font-size:9px;font-weight:600;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+
+/* SECTIONS */
+.section{padding:52px 28px;max-width:1080px;margin:0 auto}
+.sec-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.acard{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.acard p{font-size:13px;color:var(--muted);line-height:1.8}
+
+/* AGENT CARDS */
+.agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.agent-card{background:var(--s1);border:1px solid var(--border-gold);border-radius:var(--r);padding:32px;position:relative;overflow:hidden}
+.agent-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.agent-label{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.agent-name{font-size:20px;font-weight:800;color:var(--white);margin-bottom:4px}
+.agent-cred{font-size:11px;color:var(--gold-lt);margin-bottom:22px;font-weight:500}
+.contacts{display:flex;flex-direction:column;gap:8px}
+.contacts a{display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:500;padding:10px 14px;background:var(--s2);border:1px solid var(--border);border-radius:var(--r2);transition:color .15s,border-color .15s}
+.contacts a:hover{color:var(--white);border-color:var(--border-gold)}
+
+/* LIST CARDS */
+.list-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+a.lcard{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:28px;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+a.lcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+a.lcard:hover{transform:translateY(-3px);border-color:var(--border-gold)}
+.lcard.dim{opacity:.4;pointer-events:none}
+.lcard-tag{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.lcard-title{font-size:17px;font-weight:800;color:var(--white);margin-bottom:8px}
+.lcard-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.lcard-cta{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.5px}
+
+/* FOOTER */
+footer{background:var(--s1);border-top:1px solid var(--border);padding:40px 28px 28px;margin-top:40px}
+.footer-inner{max-width:1080px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;margin-bottom:28px}
+.footer-brand .fn{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-brand p{font-size:11px;color:var(--muted2);line-height:1.8}
+.footer-col h4{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.footer-col a{display:block;color:var(--muted);text-decoration:none;font-size:12px;margin-bottom:7px;transition:color .15s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-bottom p{font-size:10px;color:var(--muted2)}
+
+@media(max-width:700px){
+  header{padding:0 16px}
+  nav a{padding:5px 8px;font-size:11px}
+  .hero{padding:52px 16px 40px}
+  .section{padding:36px 16px}
+  .about-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:420px){nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-phi">φ</div>
+    <div>
+      <div class="logo-name">Fillsport</div>
+      <div class="logo-sub">Basketball Agency</div>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html" class="active" data-t="nav_home">Inicio</a>
+    <a href="lista-ita.html" data-t="nav_ita">ITA & Bosman A</a>
+    <a href="lista-argentina.html" data-t="nav_arg">Argentina</a>
+  </nav>
+  <div class="lang-sel">
+    <button data-lang="es" title="Español">🇪🇸</button>
+    <button data-lang="en" title="English">🇬🇧</button>
+    <button data-lang="it" title="Italiano">🇮🇹</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-phi">φ</div>
+  <h1 data-t="hero_h1_1">FILLSPORT</h1>
+  <div class="divider"></div>
+  <p class="hero-tagline" data-t="hero_tagline">Representación profesional · Ligas europeas · NCAA · Sudamérica</p>
+  <div class="pills">
+    <span class="pill">FIBA Licensed Agent</span>
+    <span class="pill">CONI Registered</span>
+    <span class="pill">Serie A · LBA · LNB</span>
+    <span class="pill">NCAA · NBB · FEB</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="num">FIBA</div><div class="lbl" data-t="stat_fiba">Licensed Agent</div></div>
+  </div>
+</section>
+
+<div style="max-width:1080px;margin:0 auto">
+
+  <div class="section">
+    <div class="sec-label" data-t="about_title">Nosotros</div>
+    <div class="about-grid">
+      <div class="acard"><p data-t="about_p1">FILLSPORT es una agencia internacional de basketball especializada en representación y colocación de jugadores en ligas europeas, NCAA y el mercado sudamericano.</p></div>
+      <div class="acard"><p data-t="about_p2">Liderada por Pablo Filloy, Agente Licenciado FIBA y registrado en CONI, y con el apoyo de Demian Filloy en scouting, brindamos un servicio personalizado y profesional a cada jugador que representamos.</p></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="sec-label" data-t="agents_title">Nuestro Equipo</div>
+    <div class="agents-grid">
+      <div class="agent-card">
+        <div class="agent-label" data-t="pablo_role">Director y Agente Principal</div>
+        <div class="agent-name">Pablo German Filloy</div>
+        <div class="agent-cred" data-t="pablo_cred">Agente Licenciado FIBA · Registrado CONI</div>
+        <div class="contacts">
+          <a href="mailto:pablofilloy@gmail.com">✉&nbsp; pablofilloy@gmail.com</a>
+          <a href="https://wa.me/393347178526" target="_blank">📱&nbsp; WhatsApp · +39 334 717 8526</a>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-label" data-t="demian_role">Scouting & Colaborador</div>
+        <div class="agent-name">Demian Filloy</div>
+        <div class="agent-cred">&nbsp;</div>
+        <div class="contacts">
+          <a href="mailto:demianfilloy@gmail.com">✉&nbsp; demianfilloy@gmail.com</a>
+          <a href="https://wa.me/5493513339248" target="_blank">📱&nbsp; WhatsApp · +54 9 351 333 9248</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="sec-label" data-t="lists_title">Listas de Jugadores</div>
+    <div class="list-grid">
+      <a href="lista-ita.html" class="lcard">
+        <div class="lcard-tag" data-t="list_ita_tag">Mercado Europeo</div>
+        <div class="lcard-title" data-t="list_ita_title">ITA & Bosman A</div>
+        <div class="lcard-desc" data-t="list_ita_desc">Jugadores de formación italiana y Bosman europeos para el mercado italiano y europeo.</div>
+        <div class="lcard-cta" data-t="view_list">Ver lista →</div>
+      </a>
+      <a href="lista-argentina.html" class="lcard">
+        <div class="lcard-tag" data-t="list_arg_tag">Mercado Argentino</div>
+        <div class="lcard-title" data-t="list_arg_title">Lista Argentina</div>
+        <div class="lcard-desc" data-t="list_arg_desc">Jugadores disponibles para la LNB argentina y ligas sudamericanas.</div>
+        <div class="lcard-cta" data-t="view_list">Ver lista →</div>
+      </a>
+      <div class="lcard dim">
+        <div class="lcard-tag" data-t="list_soon_tag">Próximamente</div>
+        <div class="lcard-title" data-t="list_soon_title">Stranieri, Bosman A & Cotonou</div>
+        <div class="lcard-desc" data-t="list_soon_desc">Nueva lista próximamente.</div>
+        <div class="lcard-cta">—</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fn">Fillsport</div>
+        <p>International Basketball Agency<br>FIBA Licensed · CONI Registered<br>Italy · Argentina · South America</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-t="footer_contact">Contacto</h4>
+        <a href="mailto:pablofilloy@gmail.com">pablofilloy@gmail.com</a>
+        <a href="mailto:demianfilloy@gmail.com">demianfilloy@gmail.com</a>
+        <a href="https://wa.me/393347178526" target="_blank">WA · +39 334 717 8526</a>
+        <a href="https://wa.me/5493513339248" target="_blank">WA · +54 9 351 333 9248</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-t="footer_lists">Listas</h4>
+        <a href="lista-ita.html" data-t="nav_ita">ITA & Bosman A</a>
+        <a href="lista-argentina.html" data-t="nav_arg">Argentina</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FILLSPORT International Basketball Agency</p>
+      <p style="font-size:10px;color:var(--muted2);opacity:.6" data-t="footer_disclaimer">Información sujeta a cambios.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "listTitle": "Lista Filloy Argentina — Mercado 2026/27",
+  "season": "2026 / 2027",
+  "updated": "Junio 2026",
+  "positions": [
+    {
+      "name": "PLAYMAKER / POINT GUARD",
+      "posLabel": "Posición 1",
+      "players": [
+        {"name":"Ramiro Santiago","passport":"Bosman A","nat":"ARG","role":"PG","height":"","team":"Olímpico de La Banda","league":"LNB Argentina 2025-26","notes":"Ex Flamengo (Brasil, Liga de las Américas 25/26). Olimpico de la Banda LNB.","profile":"https://basketball.latinbasket.com/player/Ramiro-Santiago/412429","video":"https://youtu.be/Yoe2SskCSdI?si=X8X3S_1q-VA1ZkC6","video2":"https://youtu.be/OjPB8ILMAX8?si=9eRx72YQtqzTNrYq","video3":"https://youtube.com/watch?v=32t7hV8i8A0"},
+        {"name":"Stefano Pierotti","passport":"Bosman A","nat":"ARG","role":"PG","height":"","team":"Ferrara","league":"Serie B Nazionale — Italia","notes":"Ex Fabriano B1 ITA. Experiencia en Brasil (Cerrado Basquete) e Italia.","profile":"https://www.legapallacanestro.com/pierotti-alles-stefano","video":"https://youtu.be/T_FZGP5TzjU"},
+        {"name":"Sigfredo Casero Ortiz","passport":"Bosman A","nat":"CUB/EU","role":"PG","height":"","team":"Union Mons","league":"Bélgica","notes":"Seleccionado cubano con pasaporte europeo. Versatilidad y experiencia internacional.","profile":"https://basketball.eurobasket.com/player/Sigfredo-Casero-Ortiz/284261","video":"https://youtube.com/shorts/uw-WwTaOq90?si=VCtfxpZtSvyFIrLK","video2":"https://youtu.be/aG0w1tbr5Y8"},
+        {"name":"Valentín Alier","passport":"Bosman A","nat":"ARG","role":"G/PG","height":"185 cm","team":"Pico Football Club","league":"Liga Argentina 2025-26","notes":"2004.","profile":"https://www.laliganacional.com.ar/laligaargentina/jugador/1503/89514/77638/ALLIE-VALENTIN","video":"https://youtu.be/YuaJmlPv_uQ"},
+        {"name":"Benjamin Imaz","passport":"","nat":"ARG","role":"PG/G","height":"","team":"Atenas de Córdoba","league":"LNB y LDD","notes":"2007. Base/Escolta con minutos tanto en LNB como en Liga Próximo.","profile":"https://www.laliganacional.com.ar/laliga/jugador/1498/89552/332193/imaz-uriarte-benjamin","video":"","profile2":"https://www.laliganacional.com.ar/ligaproximo/jugador/1498/89585/332193/imaz-uriarte-benjamin"}
+      ]
+    },
+    {
+      "name": "GUARDIA / ESCOLTA",
+      "posLabel": "Posición 2",
+      "players": [
+        {"name":"Alexis Elsener","passport":"Bosman A","nat":"ARG","role":"SG/SF","height":"","team":"La Unión de Formosa","league":"LNB Argentina 2025-26","notes":"Máximo anotador del equipo: 13.5 pti promedio.","profile":"https://basketball.latinbasket.com/player/Alexis-Elsener/106521","video":"https://youtu.be/oJNrs0FaFkw"},
+        {"name":"Ezequiel Paz","passport":"Cittadinanza ITA in corso","nat":"ARG","role":"SG/PG","height":"190 cm","team":"Gimnasia y Esgrima La Plata","league":"Liga Argentina 2025-26","notes":"","profile":"https://basketball.latinbasket.com/player/Ezequiel-Paz/461090","video":"https://youtu.be/-7DkXqkW7F8"},
+        {"name":"Benjamin Marchiaro","passport":"Formazione ITA","nat":"ARG/ITA","role":"SG/SF","height":"196 cm","team":"Huracán Las Heras","league":"Liga Argentina 2025-26","notes":"2004.","profile":"https://www.legapallacanestro.com/Marchiaro-Benjamin","video":"https://youtu.be/br0qllYaDt8?si=DVfLT6t1BHY4yh_J"},
+        {"name":"Jeremías Barco","passport":"","nat":"ARG","role":"SG/SF","height":"200 cm","team":"Olímpico de La Banda","league":"LNB Argentina 2025-26","notes":"2004.","profile":"https://www.laliganacional.com.ar/laliga/jugador/1882/89207/380702/barco-jerem%C3%ADas","video":""},
+        {"name":"Jahvon Henry-Blair","passport":"","nat":"CAN","role":"G","height":"193 cm","team":"Chorale Roanne","league":"Pro B — Francia 2025-26","notes":"","profile":"https://basketball.eurobasket.com/player/Jahvon-Blair/Finland/KTP-Basket-Kotka/442681","video":"https://youtu.be/l9EBmJSxT_Y?si=1Yp7UTpIZ4vKCoWj","video2":"https://www.youtube.com/watch?v=a_aLJ6m2Ekk"},
+        {"name":"Babacar Thiam","passport":"","nat":"SEN/USA","role":"SG","height":"193 cm","team":"Lincoln Memorial","league":"NCAA","notes":"","profile":"https://basketball.realgm.com/player/Carr-Thiam/Summary/179031","video":"https://youtu.be/UeumBuTx_yY"},
+        {"name":"Joaquín Raffaelli","passport":"","nat":"ARG","role":"PG/G","height":"","team":"Spvo. Independiente (Pico)","league":"Liga Federal 2026","notes":"2005.","profile":"https://www.argentina.basketball/liga-federal/jugador/95218/386006/raffaelli-joaquin-andre","video":"https://youtu.be/JEx6CLy8tQE?si=C77uf04WKrRxWYBE"}
+      ]
+    },
+    {
+      "name": "ALA / SMALL FORWARD",
+      "posLabel": "Posición 3",
+      "players": [
+        {"name":"Hunter Woods","passport":"","nat":"USA","role":"SF/PF","height":"198 cm","team":"Portland State","league":"NCAA Div 1","notes":"Prospecto NCAA Division 1.","profile":"https://basketball.realgm.com/player/Hunter-Woods/Summary/95886","video":"https://youtu.be/iH-7ELO0GxI","video2":"https://youtu.be/XT6KUlNbNsA?si=m8xSHeP8Kb2EGLf5"},
+        {"name":"Tyler Millin","passport":"","nat":"USA","role":"F","height":"","team":"Sparta","league":"Luxemburgo","notes":"","profile":"https://basketball.usbasket.com/player/Tyler-Millin/498375","video":"https://www.instagram.com/reel/DE5wqvHqehd/"}
+      ]
+    },
+    {
+      "name": "ALA GRANDE / POWER FORWARD",
+      "posLabel": "Posición 4",
+      "players": [
+        {"name":"Maximo Lomello","passport":"","nat":"ARG","role":"PF/C","height":"204 cm","team":"Barrio Parque","league":"Liga Argentina 2025-26","notes":"2005.","profile":"https://www.playbasket.it/puglia/profile.php?exteid=4&subj=1&season=2025&extobj=579&obj=190661&action=view&eid=5","video":"https://youtu.be/ZwOvaYORzUA"}
+      ]
+    },
+    {
+      "name": "PIVOT / CENTRO",
+      "posLabel": "Posición 5",
+      "players": [
+        {"name":"Gonzalo Bressan","passport":"Bosman A","nat":"ARG","role":"C/PF","height":"210 cm","team":"Olímpico de La Banda","league":"LNB Argentina 2025-26","notes":"★ Selección Argentina Mayor.","profile":"https://basketball.eurobasket.com/player/Gonzalo-Bressan/441237","video":"https://youtu.be/QhfF4dsV42s"},
+        {"name":"Yasin Kolo","passport":"Bosman A","nat":"GER","role":"C","height":"208 cm","team":"Kirchheim","league":"Pro A — Alemania","notes":"208 cm en liga profesional alemana. Gran envergadura y capacidad atlética.","profile":"https://basketball.eurobasket.com/player/Yasin-Kolo/185375","video":"https://youtu.be/1veodG4HdIc"},
+        {"name":"Emir Ahmedovic","passport":"","nat":"BIH","role":"C","height":"215 cm","team":"LTH Castings","league":"Liga — Eslovenia","notes":"215 cm. Gran presencia física.","profile":"https://basketball.eurobasket.com/player/Emir-Ahmedovic/201807","video":"https://youtu.be/NDQJDbwuB_Y"}
+      ]
+    }
+  ]
+}
