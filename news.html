@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News — FILLSPORT Basketball Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#111114;--s1:#1a1a20;--s2:#22222a;--s3:#2a2a35;
+  --gold:#c9a84c;--gold-lt:#e8c96d;--gold-dim:rgba(201,168,76,.12);--gold-dim2:rgba(201,168,76,.22);
+  --white:#f2f2f4;--muted:#8888a0;--muted2:#55556a;--border:rgba(255,255,255,.07);--border-gold:rgba(201,168,76,.2);
+  --r:14px;--r2:10px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.5;min-height:100vh}
+
+header{position:sticky;top:0;z-index:100;background:rgba(17,17,20,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;padding:0 28px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-phi{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:400;color:#8888a0;flex-shrink:0;font-family:Georgia,'Times New Roman',serif;line-height:1;letter-spacing:-1px}
+.logo-name{font-size:14px;font-weight:800;color:var(--white);letter-spacing:1.5px;text-transform:uppercase;line-height:1.2}
+.logo-sub{font-size:9px;font-weight:500;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:2px;flex:1}
+nav a{color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap}
+nav a:hover{color:var(--white);background:rgba(255,255,255,.05)}
+nav a.active{color:var(--gold);background:var(--gold-dim)}
+.lang-sel{display:flex;gap:4px;margin-left:auto;flex-shrink:0}
+.lang-sel button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 10px;border-radius:7px;cursor:pointer;font-size:13px;font-family:inherit;transition:all .15s;line-height:1}
+.lang-sel button.active,.lang-sel button:hover{background:var(--gold-dim2);border-color:var(--border-gold);color:var(--white)}
+.lang-sel button.active{font-weight:700}
+
+/* PAGE HEADER */
+.page-hero{padding:48px 28px 36px;max-width:1080px;margin:0 auto}
+.page-hero-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.page-hero h1{font-size:clamp(22px,4vw,36px);font-weight:900;letter-spacing:3px;text-transform:uppercase;color:var(--white);margin-bottom:6px}
+.page-hero p{font-size:12px;color:var(--muted);letter-spacing:1px}
+
+/* FILTER BAR */
+.filter-bar{position:sticky;top:60px;z-index:50;background:rgba(17,17,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:12px 28px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.filter-btn{background:var(--s2);border:1px solid var(--border);color:var(--muted);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;white-space:nowrap}
+.filter-btn:hover{border-color:var(--border-gold);color:var(--white)}
+.filter-btn.active{background:var(--gold-dim2);border-color:var(--border-gold);color:var(--gold)}
+.filter-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-right:4px}
+
+/* NEWS FEED */
+.news-section{max-width:780px;margin:0 auto;padding:36px 28px 60px}
+.news-count{font-size:11px;color:var(--muted2);margin-bottom:24px;letter-spacing:.5px}
+.news-count span{color:var(--gold);font-weight:700}
+
+.news-card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:16px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.news-card:hover{border-color:var(--border-gold);transform:translateY(-2px)}
+.news-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .2s}
+.news-card:hover::before{opacity:1}
+.news-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+.news-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.news-date{font-size:10px;font-weight:600;color:var(--muted2);letter-spacing:1px;text-transform:uppercase}
+.news-player-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);background:var(--gold-dim);border:1px solid var(--border-gold);padding:3px 10px;border-radius:20px}
+.news-card-img{width:100%;max-height:200px;object-fit:cover;border-radius:var(--r2);margin-bottom:16px;display:block}
+.news-title{font-size:16px;font-weight:800;color:var(--white);margin-bottom:8px;line-height:1.4}
+.news-text{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.news-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--gold);text-decoration:none;letter-spacing:.5px;transition:color .15s}
+.news-link:hover{color:var(--gold-lt)}
+.news-link::after{content:'↗';font-size:12px}
+
+.no-results{text-align:center;padding:60px 20px;color:var(--muted2);font-size:13px}
+
+footer{background:var(--s1);border-top:1px solid var(--border);padding:40px 28px 28px;margin-top:0}
+.footer-inner{max-width:1080px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;margin-bottom:28px}
+.footer-brand .fn{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.footer-brand p{font-size:11px;color:var(--muted2);line-height:1.8}
+.footer-col h4{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.footer-col a{display:block;color:var(--muted);text-decoration:none;font-size:12px;margin-bottom:7px;transition:color .15s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-bottom p{font-size:10px;color:var(--muted2)}
+
+@media(max-width:700px){
+  header{padding:0 16px}
+  nav a{padding:5px 8px;font-size:11px}
+  .page-hero{padding:32px 16px 24px}
+  .filter-bar{padding:10px 16px}
+  .news-section{padding:24px 16px 40px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:420px){nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-phi">φ</div>
+    <div>
+      <div class="logo-name">Fillsport</div>
+      <div class="logo-sub">Basketball Agency</div>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html" data-t="nav_home">Inicio</a>
+    <a href="lista-ita.html" data-t="nav_ita">ITA & Bosman A</a>
+    <a href="lista-argentina.html" data-t="nav_arg">Argentina</a>
+    <a href="news.html" class="active" data-t="nav_news">News</a>
+  </nav>
+  <div class="lang-sel">
+    <button data-lang="es" title="Español">🇪🇸</button>
+    <button data-lang="en" title="English">🇬🇧</button>
+    <button data-lang="it" title="Italiano">🇮🇹</button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-label" data-t="news_label">Novedades</div>
+  <h1 data-t="nav_news">News</h1>
+  <p data-t="news_sub">Actualidad de los jugadores FILLSPORT</p>
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <span class="filter-label" data-t="filter_by">Jugador</span>
+  <button class="filter-btn active" data-player="all" data-t="filter_all">Todos</button>
+</div>
+
+<div class="news-section">
+  <div class="news-count" id="newsCount"></div>
+  <div id="newsFeed"></div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fn">Fillsport</div>
+        <p>International Basketball Agency<br>FIBA Licensed · CONI Registered<br>Italy · Argentina · South America</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-t="footer_contact">Contacto</h4>
+        <a href="mailto:pablofilloy@gmail.com">pablofilloy@gmail.com</a>
+        <a href="mailto:demianfilloy@gmail.com">demianfilloy@gmail.com</a>
+        <a href="https://wa.me/393347178526" target="_blank">WA · +39 334 717 8526</a>
+        <a href="https://wa.me/5493513339248" target="_blank">WA · +54 9 351 333 9248</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-t="footer_lists">Listas</h4>
+        <a href="lista-ita.html" data-t="nav_ita">ITA & Bosman A</a>
+        <a href="lista-argentina.html" data-t="nav_arg">Argentina</a>
+        <a href="news.html" data-t="nav_news">News</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FILLSPORT International Basketball Agency</p>
+      <p style="font-size:10px;color:var(--muted2);opacity:.6" data-t="footer_disclaimer">Información sujeta a cambios.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script>
+let allNews = [];
+let activePlayer = 'all';
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  const months = {
+    es: ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'],
+    en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    it: ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic']
+  };
+  const m = months[currentLang] || months.es;
+  return `${d.getDate()} ${m[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+function buildFilters(news) {
+  const players = [...new Set(news.map(n => n.player))].sort();
+  const bar = document.getElementById('filterBar');
+  // remove old player buttons
+  bar.querySelectorAll('[data-player]:not([data-player="all"])').forEach(b => b.remove());
+  players.forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.player = p;
+    btn.textContent = p;
+    btn.addEventListener('click', () => setFilter(p));
+    bar.appendChild(btn);
+  });
+}
+
+function setFilter(player) {
+  activePlayer = player;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.player === player);
+  });
+  renderNews();
+}
+
+function renderNews() {
+  const feed = document.getElementById('newsFeed');
+  const countEl = document.getElementById('newsCount');
+  const filtered = activePlayer === 'all' ? allNews : allNews.filter(n => n.player === activePlayer);
+  const lang = currentLang;
+
+  countEl.innerHTML = `<span>${filtered.length}</span> ${t('results_players')}`;
+
+  if (filtered.length === 0) {
+    feed.innerHTML = `<div class="no-results">${t('news_no_results')}</div>`;
+    return;
+  }
+
+  feed.innerHTML = filtered.map(n => {
+    const title = n[`title_${lang}`] || n.title_es;
+    const text = n[`text_${lang}`] || n.text_es;
+    const imgHtml = n.image ? `<img class="news-card-img" src="${n.image}" alt="${title}">` : '';
+    const linkHtml = n.link ? `<a class="news-link" href="${n.link}" target="_blank" rel="noopener">${t('news_read_more')}</a>` : '';
+    return `
+    <div class="news-card">
+      ${imgHtml}
+      <div class="news-card-top">
+        <div class="news-meta">
+          <span class="news-date">${formatDate(n.date)}</span>
+          <span class="news-player-tag">${n.player}</span>
+        </div>
+      </div>
+      <div class="news-title">${title}</div>
+      <div class="news-text">${text}</div>
+      ${linkHtml}
+    </div>`;
+  }).join('');
+}
+
+function onLangChange() {
+  renderNews();
+}
+
+fetch('data/news.json')
+  .then(r => r.json())
+  .then(data => {
+    allNews = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+    buildFilters(allNews);
+    renderNews();
+  });
+</script>
+</body>
+</html>
