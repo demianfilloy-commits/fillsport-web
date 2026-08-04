@@ -60,9 +60,12 @@ nav a.active{color:var(--gold);background:var(--gold-dim)}
 .news-card-img{width:100%;max-height:200px;object-fit:cover;border-radius:var(--r2);margin-bottom:16px;display:block}
 .news-title{font-size:16px;font-weight:800;color:var(--white);margin-bottom:8px;line-height:1.4}
 .news-text{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px}
-.news-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--gold);text-decoration:none;letter-spacing:.5px;transition:color .15s}
-.news-link:hover{color:var(--gold-lt)}
-.news-link::after{content:'↗';font-size:12px}
+.news-links{display:flex;gap:8px;flex-wrap:wrap}
+.news-link{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;color:var(--gold);text-decoration:none;letter-spacing:.5px;padding:8px 14px;background:var(--s2);border:1px solid var(--border);border-radius:var(--r2);transition:color .15s,border-color .15s,background .15s}
+.news-link:hover{color:var(--gold-lt);border-color:var(--border-gold);background:var(--gold-dim)}
+.news-link .ico{font-size:12px;line-height:1}
+.news-link.vid{color:var(--white)}
+.news-link.vid .ico{color:var(--gold)}
 
 .no-results{text-align:center;padding:60px 20px;color:var(--muted2);font-size:13px}
 
@@ -211,7 +214,10 @@ function renderNews() {
     const title = n[`title_${lang}`] || n.title_es;
     const text = n[`text_${lang}`] || n.text_es;
     const imgHtml = n.image ? `<img class="news-card-img" src="${n.image}" alt="${title}">` : '';
-    const linkHtml = n.link ? `<a class="news-link" href="${n.link}" target="_blank" rel="noopener">${t('news_read_more')}</a>` : '';
+    const links = [];
+    if (n.link) links.push(`<a class="news-link" href="${n.link}" target="_blank" rel="noopener"><span class="ico">↗</span>${t('news_read_more')}</a>`);
+    if (n.video) links.push(`<a class="news-link vid" href="${n.video}" target="_blank" rel="noopener"><span class="ico">▶</span>${t('news_video')}</a>`);
+    const linksHtml = links.length ? `<div class="news-links">${links.join('')}</div>` : '';
     return `
     <div class="news-card">
       ${imgHtml}
@@ -223,7 +229,7 @@ function renderNews() {
       </div>
       <div class="news-title">${title}</div>
       <div class="news-text">${text}</div>
-      ${linkHtml}
+      ${linksHtml}
     </div>`;
   }).join('');
 }
