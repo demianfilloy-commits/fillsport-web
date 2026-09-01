@@ -169,18 +169,6 @@
       "posLabel": "Posición 3",
       "players": [
         {
-          "name": "Máximo Milovich",
-          "passport": "",
-          "nat": "ARG",
-          "role": "SF/PF",
-          "height": "203 cm",
-          "team": "River Plate",
-          "league": "Liga Argentina 2026-27",
-          "notes": "2001, Buenos Aires. Llega desde UC San Diego (NCAA Div 1), donde disputó 33 partidos y superó los 1.000 puntos en su carrera universitaria; único argentino en el March Madness 2025. Ex Biola University. Selección Argentina juvenil: Mundial U17 2018 (6.7 pti, 5.9 reb). Hijo de Gabriel \"Patonga\" Milovich, internacional con Argentina en los Mundiales 1986 y 1990.",
-          "profile": "https://basketball.realgm.com/player/Maximo-Milovich/Summary/119538",
-          "video": ""
-        },
-        {
           "name": "Hunter Woods",
           "passport": "",
           "nat": "USA",
@@ -211,6 +199,18 @@
       "name": "ALA GRANDE / POWER FORWARD",
       "posLabel": "Posición 4",
       "players": [
+        {
+          "name": "Máximo Milovich",
+          "passport": "",
+          "nat": "ARG",
+          "role": "PF/C",
+          "height": "203 cm",
+          "team": "River Plate",
+          "league": "Liga Argentina 2026-27",
+          "notes": "2001, Buenos Aires. Llega desde UC San Diego (NCAA Div 1), donde disputó 33 partidos y superó los 1.000 puntos en su carrera universitaria; único argentino en el March Madness 2025. Ex Biola University. Selección Argentina juvenil: Mundial U17 2018 (6.7 pti, 5.9 reb). Hijo de Gabriel \"Patonga\" Milovich, internacional con Argentina en los Mundiales 1986 y 1990.",
+          "profile": "https://basketball.realgm.com/player/Maximo-Milovich/Summary/119538",
+          "video": ""
+        },
         {
           "name": "Maximo Lomello",
           "passport": "",
