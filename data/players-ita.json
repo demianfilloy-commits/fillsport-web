@@ -698,18 +698,6 @@
       "posLabel": "Posizione 3-4",
       "players": [
         {
-          "name": "Nemanja Dincic",
-          "passport": "Bosman A",
-          "nat": "SRB/ITA",
-          "role": "Pos 4/5",
-          "height": "202 cm",
-          "team": "Libero",
-          "league": "Free agent — ITA",
-          "notes": "1998, Belgrado. Doppio passaporto serbo-italiano. Lungo moderno: gioca in post e tira da tre. In Italia dal 2015/16. Ex Serie A2: Chieti, Scafati, Roseto, Napoli, Treviglio, Assigeco Piacenza. Ex Serie B Nazionale: Cassino, Faenza, Crema, Ruvo di Puglia. Ultima stagione: Action Now Monopoli.",
-          "profile": "https://basketball.eurobasket.com/player/Nemanja-Dincic/319814",
-          "video": "https://youtu.be/TS68NZrrIIk"
-        },
-        {
           "name": "Mattia Udom",
           "passport": "Formazione ITA",
           "nat": "ITA",
@@ -769,6 +757,18 @@
           "profile": "https://basketball.eurobasket.com/player/Jon-Aramburu/202328",
           "video": "https://www.youtube.com/watch?v=030uGoJOqkk",
           "video2": "https://youtu.be/ReYSH0s9bgA"
+        },
+        {
+          "name": "Nemanja Dincic",
+          "passport": "Bosman A",
+          "nat": "SRB/ITA",
+          "role": "Pos 4/5",
+          "height": "202 cm",
+          "team": "Libero",
+          "league": "Free agent — ITA",
+          "notes": "1998, Belgrado. Doppio passaporto serbo-italiano. Lungo moderno: gioca in post e tira da tre. In Italia dal 2015/16. Ex Serie A2: Chieti, Scafati, Roseto, Napoli, Treviglio, Assigeco Piacenza. Ex Serie B Nazionale: Cassino, Faenza, Crema, Ruvo di Puglia. Ultima stagione: Action Now Monopoli.",
+          "profile": "https://basketball.eurobasket.com/player/Nemanja-Dincic/319814",
+          "video": "https://youtu.be/TS68NZrrIIk"
         },
         {
           "name": "Matej Kavas",
