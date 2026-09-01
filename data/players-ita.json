@@ -698,6 +698,18 @@
       "posLabel": "Posizione 3-4",
       "players": [
         {
+          "name": "Juan Pablo Vaulet",
+          "passport": "Bosman A",
+          "nat": "ARG/POL",
+          "role": "Pos 3/4",
+          "height": "199 cm",
+          "team": "Movistar Estudiantes",
+          "league": "1ª FEB — Spagna",
+          "notes": "⭐ TOP PLAYER. NBA Draft Charlotte 2015. Ex Manresa, AEK. Nazionale Argentina.",
+          "profile": "https://basketball.eurobasket.com/player/Juan-Pablo-Vaulet/254377",
+          "video": "https://youtu.be/xxYJxKPdeqg"
+        },
+        {
           "name": "Mattia Udom",
           "passport": "Formazione ITA",
           "nat": "ITA",
@@ -732,18 +744,6 @@
           "notes": "Esperienza in ABA Liga. Punto di riferimento in area in B1.",
           "profile": "https://www.legapallacanestro.com/bakovi%C4%87-marko",
           "video": "https://youtu.be/lnzLkz8Lj2w"
-        },
-        {
-          "name": "Juan Pablo Vaulet",
-          "passport": "Bosman A",
-          "nat": "ARG/POL",
-          "role": "Pos 3/4",
-          "height": "199 cm",
-          "team": "Movistar Estudiantes",
-          "league": "1ª FEB — Spagna",
-          "notes": "⭐ TOP PLAYER. NBA Draft Charlotte 2015. Ex Manresa, AEK. Nazionale Argentina.",
-          "profile": "https://basketball.eurobasket.com/player/Juan-Pablo-Vaulet/254377",
-          "video": "https://youtu.be/xxYJxKPdeqg"
         },
         {
           "name": "Jon Aramburu",
