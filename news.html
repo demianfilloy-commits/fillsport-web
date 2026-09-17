@@ -227,6 +227,7 @@ function renderNews() {
     const imgHtml = n.image ? `<img class="news-card-img" src="${n.image}" alt="${title}">` : '';
     const links = [];
     if (n.link) links.push(`<a class="news-link" href="${n.link}" target="_blank" rel="noopener"><span class="ico">↗</span>${t('news_read_more')}</a>`);
+    if (n.link2) links.push(`<a class="news-link" href="${n.link2}" target="_blank" rel="noopener"><span class="ico">◆</span>${t('news_official')}</a>`);
     if (n.video) links.push(`<a class="news-link vid" href="${n.video}" target="_blank" rel="noopener"><span class="ico">▶</span>${t('news_video')}</a>`);
     const linksHtml = links.length ? `<div class="news-links">${links.join('')}</div>` : '';
     return `
